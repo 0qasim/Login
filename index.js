@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json()); // Use JSON body parsing middleware
 app.use(cors({
 
-origin:["deploy-mern-login.vercel.app"],
+origin:["https://deploy-mern-login.vercel.app"],
 methods:["POST","GET"],
 credentials:true
 
