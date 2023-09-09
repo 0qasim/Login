@@ -12,13 +12,13 @@ const app = express();
 app.use(express.json()); // Use JSON body parsing middleware
 app.use(cors({
 
-origin:["http://localhost:5173"],
-methods:["GET", "POST", "PUT", "DELETE"],
+origin:["https://deploy-mern-api.vercel.app"],
+methods:["GET", "POST"],
 credentials:true
 
 }));
 app.use(cookieParser())
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+mongoose.connect("mongodb+srv://qaziqasim:qasim92@cluster0.sp0ggxq.mongodb.net/employee?retryWrites=true&w=majority");
 const verifyUser = (req, res, next) => {
 const token =req.cookies.token ;
 if (!token) {
